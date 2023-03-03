@@ -98,8 +98,7 @@ public:
             successFlag = false;
             this->_current_state = this->_states.at(static_cast<int>(id));
         }else{
-            std::string error_message{"Cannot switch from state number "};
-            error_message = error_message +
+            std::string error_message = "Cannot switch from state number " +
                             std::to_string(this->_current_state->get_Mark()) + " to state number " +
                             std::to_string(static_cast<int>(id));
             POSITION_EXCEPTION(
